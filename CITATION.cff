@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying research draft."
+title: "A Classification of Mathieu's Second Conjecture for Reductive Spherical Pairs"
+type: article
+authors:
+  - family-names: Long
+    given-names: Christopher D.
+date-released: 2026-09-22
+url: https://github.com/long-mathematics/mathieu-second-conjecture-spherical-pairs
+repository-code: https://github.com/long-mathematics/mathieu-second-conjecture-spherical-pairs
+license: MIT
