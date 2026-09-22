@@ -38,7 +38,7 @@ Equivalently,
 $$
 \text{Mathieu II holds for }(G,H)
 \quad\Longleftrightarrow\quad
-G_{\mathrm{der}}\subseteq \operatorname{core}_G(H).
+G_{\mathrm{der}}\subseteq \mathrm{core}_G(H).
 $$
 
 ## Proof structure
