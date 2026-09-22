@@ -52,7 +52,7 @@ The proof combines:
 - a subdirect-product argument for products of $\mathrm{SL}_2$ factors;
 - Duistermaat--van der Kallen for the toral direction.
 
-No spherical-localization transfer theorem or classification of spherical subgroups is assumed.
+Classical classification results for reductive spherical subgroups are available; in the simple-group case, the foundational list is due to [Manfred Kr\u00e4mer (1979)](https://www.numdam.org/item/CM_1979__38_2_129_0/). One possible proof strategy would be to check the classified families individually. The argument here is uniform instead: the root-doublet lemma handles all active higher-rank simple factors, while the residual $A_1$ factors are handled directly by the $\mathrm{SL}_2/N(T)$ circuit and the subdirect-product lemma. No separate spherical-localization transfer theorem is needed.
 
 ## Reproducible checks
 
