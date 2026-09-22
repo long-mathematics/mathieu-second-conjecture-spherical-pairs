@@ -1,0 +1,38 @@
+name: Sync revised manuscript PDF
+
+on:
+  push:
+    branches: [docs/contextualize-uniform-proof]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    if: "!contains(github.event.head_commit.message, '[pdf-sync]')"
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends latexmk texlive-latex-extra texlive-fonts-recommended lmodern
+      - name: Compile manuscript
+        run: |
+          latexmk -pdf -interaction=nonstopmode -halt-on-error mathieu_second_conjecture_spherical_pairs.tex
+          if grep -E 'undefined|LaTeX Warning:|Overfull' mathieu_second_conjecture_spherical_pairs.log; then
+            exit 1
+          fi
+      - name: Commit PDF if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f mathieu_second_conjecture_spherical_pairs.pdf
+          if git diff --cached --quiet; then
+            echo "Tracked PDF is current."
+            exit 0
+          fi
+          git commit -m "[pdf-sync] Rebuild manuscript PDF"
+          git push origin HEAD:docs/contextualize-uniform-proof
