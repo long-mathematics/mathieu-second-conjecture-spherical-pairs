@@ -1,0 +1,17 @@
+Normalizer circuit: polynomial identity verified exactly.
+m= 1: h(P^m)=0, h(U P^m)=8/15
+m= 2: h(P^m)=0, h(U P^m)=128/315
+m= 3: h(P^m)=0, h(U P^m)=1024/3003
+m= 4: h(P^m)=0, h(U P^m)=32768/109395
+m= 5: h(P^m)=0, h(U P^m)=262144/969969
+m= 6: h(P^m)=0, h(U P^m)=4194304/16900975
+m= 7: h(P^m)=0, h(U P^m)=33554432/145422675
+m= 8: h(P^m)=0, h(U P^m)=2147483648/9917826435
+m= 9: h(P^m)=0, h(U P^m)=17179869184/83945001525
+m=10: h(P^m)=0, h(U P^m)=274877906944/1412926920405
+m=11: h(P^m)=0, h(U P^m)=2199023255552/11835556670925
+m=12: h(P^m)=0, h(U P^m)=70368744177664/395033145117975
+Normalizer direct monomial integrations: 114 checks passed.
+A2 interlacing selections and dimension checks: 960 passed.
+B2 integral/spin interlacing selections and dimension checks: 440 passed.
+All checks passed. These finite checks are supplementary, not a formal verification.
